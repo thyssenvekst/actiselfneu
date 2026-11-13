@@ -3,7 +3,7 @@
   var doc = document.documentElement;
   var body = document.body;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var mqMobile = window.matchMedia('(max-width: 1080px)');
+  var mqMobile = window.matchMedia('(max-width: 1020px)');
 
   /* Mobilmenü */
   var btn = document.querySelector('.menu-btn');
