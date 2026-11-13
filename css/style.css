@@ -566,3 +566,5 @@ img { color: transparent; }
 html { overflow-x: clip; }
 .page-title, .hero-title, .statement, .h-xl, .prose h2, .news-list h3 { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
 @media (max-width: 600px) { .page-title { font-size: clamp(1.9rem, 8.2vw, 2.4rem); } .legal, .prose { overflow-wrap: break-word; } }
+/* Fix: Mobilmenü */
+@media (max-width: 1080px) { .site-header { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background: var(--paper); } }
