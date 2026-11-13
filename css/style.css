@@ -566,5 +566,23 @@ img { color: transparent; }
 html { overflow-x: clip; }
 .page-title, .hero-title, .statement, .h-xl, .prose h2, .news-list h3 { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
 @media (max-width: 600px) { .page-title { font-size: clamp(1.9rem, 8.2vw, 2.4rem); } .legal, .prose { overflow-wrap: break-word; } }
-/* Fix: Mobilmenü */
+
+/* Fix: Mobilmenü (backdrop-filter darf auf Mobil nicht aktiv sein) */
 @media (max-width: 1080px) { .site-header { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background: var(--paper); } }
+
+/* Marken-Umschalter actiself / neomentric */
+:root { --switch-h: 40px; }
+.brand-switch { background: var(--dark); color: var(--on-dark-2); font-size: var(--t-xs); }
+.switch-inner { display: flex; gap: 4px; height: var(--switch-h); align-items: stretch; }
+.sw { display: flex; align-items: center; gap: 8px; padding: 0 14px; text-decoration: none; color: var(--on-dark-2); border-bottom: 2px solid transparent; letter-spacing: .02em; }
+.sw:first-child { margin-left: -14px; }
+.sw b { font-weight: 700; color: var(--on-dark); font-size: var(--t-s); letter-spacing: -.01em; }
+.sw:hover { color: var(--on-dark); }
+.sw.is-active { border-bottom-color: var(--accent); color: var(--on-dark); background: rgba(243,243,240,.06); }
+@media (max-width: 480px) { .sw span { display: none; } }
+html { scroll-padding-top: calc(var(--head-h) + var(--switch-h) + 24px); }
+.toc-box { top: calc(var(--head-h) + var(--switch-h) + 28px); }
+@media (max-width: 1080px) { .main-nav { inset: calc(var(--head-h) + var(--switch-h) + env(safe-area-inset-top, 0px)) 0 0 0; } }
+.footer-switch { margin-top: 24px; }
+.footer-switch a { color: var(--on-dark) !important; font-weight: 650; border-bottom: 2px solid var(--accent); }
+.site-neomentric .brand-logo { height: 34px; }
