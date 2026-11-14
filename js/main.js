@@ -3,15 +3,28 @@
   var doc = document.documentElement;
   var body = document.body;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var mqMobile = window.matchMedia('(max-width: 1020px)');
+  var mqMobile = window.matchMedia('(max-width: 1240px)');
 
   /* Mobilmenü */
   var btn = document.querySelector('.menu-btn');
   if (btn) {
     btn.setAttribute('role', 'button');
     var label = btn.querySelector('.menu-label');
+    var lockY = 0;
     var setOpen = function (open) {
+      var was = body.classList.contains('nav-open');
+      if (open && !was) {
+        // Seite hinter dem Menü festhalten (iOS Safari ignoriert overflow:hidden)
+        lockY = window.pageYOffset || doc.scrollTop || 0;
+        body.style.top = -lockY + 'px';
+        doc.classList.add('nav-lock');
+      }
       body.classList.toggle('nav-open', open);
+      if (!open && was) {
+        doc.classList.remove('nav-lock');
+        body.style.top = '';
+        try { window.scrollTo({ top: lockY, left: 0, behavior: 'instant' }); } catch (e) { window.scrollTo(0, lockY); }
+      }
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       if (label) label.textContent = open ? 'Schließen' : 'Menü';
     };
