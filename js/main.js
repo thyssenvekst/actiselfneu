@@ -135,4 +135,18 @@
       a.addEventListener('click', function () { if (window.matchMedia('(max-width: 1000px)').matches) toc.removeAttribute('open'); });
     });
   }
+
+  /* Info-Fenster der Themen-Kacheln */
+  document.querySelectorAll('[data-dialog]').forEach(function (b) {
+    var d = document.getElementById(b.getAttribute('data-dialog'));
+    if (!d || typeof d.showModal !== 'function') return;
+    b.addEventListener('click', function () { d.showModal(); });
+    d.querySelector('.dlg-close').addEventListener('click', function () { d.close(); });
+    // Klick neben das Fenster schließt es
+    d.addEventListener('click', function (e) {
+      var r = d.getBoundingClientRect();
+      if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) d.close();
+    });
+    d.addEventListener('close', function () { b.focus(); });
+  });
 })();
