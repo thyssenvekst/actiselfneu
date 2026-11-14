@@ -26,7 +26,7 @@
         try { window.scrollTo({ top: lockY, left: 0, behavior: 'instant' }); } catch (e) { window.scrollTo(0, lockY); }
       }
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      if (label) label.textContent = open ? 'Schließen' : 'Menü';
+      if (label) label.textContent = open ? (btn.getAttribute('data-close') || 'Schließen') : (btn.getAttribute('data-open') || 'Menü');
     };
     btn.addEventListener('click', function (e) {
       e.preventDefault();
@@ -149,4 +149,30 @@
     });
     d.addEventListener('close', function () { b.focus(); });
   });
+
+  /* Sprachmenü: schließen bei Klick daneben oder Esc */
+  var ls = document.querySelector('.lang-switch');
+  if (ls) {
+    document.addEventListener('click', function (e) { if (ls.open && !ls.contains(e.target)) ls.open = false; });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && ls.open) { ls.open = false; ls.querySelector('summary').focus(); } });
+  }
+
+  /* EN/FR: Hinweis vor dem Shop (App bisher nur auf Deutsch) */
+  var sd = document.getElementById('store-dlg');
+  if (sd && typeof sd.showModal === 'function') {
+    var go = sd.querySelector('[data-store-go]');
+    document.querySelectorAll('a[href^="https://actiself.store"]').forEach(function (a) {
+      if (a === go) return;
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        go.href = a.href;
+        go.target = a.target || '';
+        sd.showModal();
+      });
+    });
+    sd.querySelector('[data-store-cancel]').addEventListener('click', function () { sd.close(); });
+    sd.querySelector('.dlg-close').addEventListener('click', function () { sd.close(); });
+    sd.addEventListener('click', function (e) { if (e.target === sd) sd.close(); });
+    go.addEventListener('click', function () { setTimeout(function () { sd.close(); }, 0); });
+  }
 })();

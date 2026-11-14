@@ -361,3 +361,30 @@ button.topic-c:focus-visible { outline: 3px solid var(--blue); outline-offset: 3
   button.topic-c .topic-t { align-self: end; }
   button.topic-c .topic-more { align-self: start; }
 }
+
+/* Sprachmenü */
+.header-bar { justify-content: flex-start; }
+.brand { margin-right: auto; }
+.lang-switch { position: relative; flex: none; }
+.lang-switch summary { list-style: none; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; padding: 8px 10px; border-radius: 999px; font-weight: 600; font-size: .9rem; color: var(--navy); border: 1px solid var(--line); }
+.lang-switch summary::-webkit-details-marker { display: none; }
+.lang-switch summary:hover, .lang-switch[open] summary { border-color: var(--blue); }
+.lang-switch summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+.lang-switch svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; }
+.lang-switch ul { position: absolute; right: 0; top: calc(100% + 8px); z-index: 60; list-style: none; margin: 0; padding: 6px; min-width: 150px; background: #fff; border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px rgba(19,33,74,.12); }
+.lang-switch li a { display: block; padding: 10px 12px; border-radius: 8px; text-decoration: none; color: var(--navy); }
+.lang-switch li a:hover { background: var(--tint); }
+.lang-switch li a[aria-current] { font-weight: 700; color: var(--blue-ink); }
+@media (max-width: 1240px) { .lang-switch summary { padding: 6px 9px; } }
+
+/* Hinweis auf EN/FR-Seiten */
+.lang-notice { background: #fff7e6; border-bottom: 1px solid #f3dfb3; color: #5c4510; font-size: .92rem; }
+.lang-notice .wrap { padding-top: 12px; padding-bottom: 12px; }
+.lang-notice p { margin: 0; line-height: 1.5; }
+.lang-notice a { color: inherit; font-weight: 600; overflow-wrap: anywhere; }
+.store-dlg .btn-row { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px; }
+.brand { flex: none; }
+.site-header .wrap { max-width: 1320px; }
+@media (min-width: 1241px) { .nav-link { padding: 8px 10px; font-size: .92rem; } .nav-item:last-child .nav-link { padding: 10px 16px; } }
+button.btn { font-family: inherit; font-size: 1rem; cursor: pointer; border: 0; }
+button.btn.btn-ghost { border: 1.5px solid var(--line); }

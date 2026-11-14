@@ -1,0 +1,22 @@
+# actiself
+
+> actiself is a prevention app for iPhone and Apple Watch by Biomentric UG (Munich, Germany), developed by researchers of the Max Planck Institute of Psychiatry. A 6-week programme with 42 evidence-based exercises from behavioural therapy (stress management, negative thoughts, sleep hygiene, behavioural activation) for working people under chronic stress. The app is currently available in German only; English and French versions are planned for early 2027.
+
+## Pages (German)
+- [Startseite](https://actiself.com/): overview of the app
+- [Die App](https://actiself.com/actiself-app/): programme and features
+- [So startest du](https://actiself.com/so-startest-du/): download, sign-up, activation code
+- [Support & FAQ](https://actiself.com/support/): frequently asked questions
+- [Unsere Story](https://actiself.com/ueber-biomentric/): history and research background
+
+## Pages (English / French)
+- [English](https://actiself.com/en/)
+- [Français](https://actiself.com/fr/)
+
+## Key facts
+- Platforms: iOS and watchOS; works with wearables that sync with Apple Health
+- Activation code: https://actiself.store/
+- App Store: https://apps.apple.com/de/app/actiself/id6737044573
+- Study: https://www.medrxiv.org/content/10.1101/2025.01.18.25320669v1 (pilot study, 52 participants)
+- Support: support@biomentric.zohodesk.eu
+- Not a medical treatment and no substitute for one
