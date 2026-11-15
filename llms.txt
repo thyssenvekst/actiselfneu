@@ -1,6 +1,6 @@
 # actiself
 
-> actiself is a prevention app for iPhone and wearables by Biomentric UG (Munich, Germany), developed by researchers of the Max Planck Institute of Psychiatry. A 6-week programme with 42 evidence-based exercises from behavioural therapy (stress management, negative thoughts, sleep hygiene, behavioural activation) for working people under chronic stress. The app is currently available in German only; English and French versions are planned for early 2027.
+> actiself is a prevention app for iPhone and wearables by Biomentric UG (Munich, Germany), developed by researchers of the Max Planck Institute of Psychiatry. A 6-week programme with 42 evidence-based exercises from behavioural therapy (stress management, behavioural activation, everyday physical activity, sleep hygiene) for working people under chronic stress. The app is currently available in German only; English and French versions are planned for early 2027.
 
 ## Pages (German)
 - [Startseite](https://actiself.com/): overview of the app

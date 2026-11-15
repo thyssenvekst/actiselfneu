@@ -23,9 +23,9 @@
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <link rel="preload" href="../../fonts/mulish.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../../css/style.css?v=21">
+<link rel="stylesheet" href="../../css/style.css?v=23">
 <script>document.documentElement.classList.add('js')</script>
-<script src="../../js/main.js?v=21" defer></script>
+<script src="../../js/main.js?v=23" defer></script>
 </head>
 <body class="sec-app site-actiself lang-en">
 <a class="skip" href="#inhalt">Skip to content</a>
@@ -68,7 +68,19 @@
 <p>With smartwatches such as an Apple Watch or fitness trackers, actiself makes your progress towards a more active lifestyle visible and helps you reach your personal goals. You decide what you want to achieve. At the same time, monitoring with wearables helps actiself understand where you need support and give you more targeted recommendations.</p>
 
 <h2 id="how-does-actiself-work">How does actiself work?</h2>
-<p>The actiself programme consists of 42 exercises on topics such as stress management, dealing with negative thoughts, sleep hygiene and behavioural activation. All content consists of effective, evidence-based elements from behavioural therapy. With one exercise a day, you can promote your mental health over 6 weeks. With actiself you also practise building more exercise and pleasant and social activities into your daily life. actiself accompanies you with daily questions about your mood and your sleep.</p>
+<p>The actiself programme consists of 42 exercises from four areas: stress management, behavioural activation, everyday physical activity and sleep hygiene. All content consists of effective, evidence-based elements from behavioural therapy. With one exercise a day, you can promote your mental health over 6 weeks. With actiself you also practise building more exercise and pleasant and social activities into your daily life. actiself accompanies you with daily questions about your mood and your sleep.</p>
+<p class="topics-intro" data-reveal>actiself supports you in these four areas:</p>
+<div class="topics4">
+<button type="button" class="topic-c" data-reveal data-dialog="dlg-stress" aria-haspopup="dialog"><img src="../../img/ill-stress.png" alt="Stress management" loading="lazy" decoding="async" class="topic-ill"><span class="topic-t">Stress management</span><span class="topic-more">Learn more</span></button>
+<button type="button" class="topic-c" data-reveal data-dialog="dlg-aktivierung" aria-haspopup="dialog"><img src="../../img/ill-alltag.png" alt="Behavioural activation" loading="lazy" decoding="async" class="topic-ill"><span class="topic-t">Behavioural activation</span><span class="topic-more">Learn more</span></button>
+<button type="button" class="topic-c" data-reveal data-dialog="dlg-bewegung" aria-haspopup="dialog"><img src="../../img/ill-tracken.png" alt="More movement in everyday life" loading="lazy" decoding="async" class="topic-ill"><span class="topic-t">More movement in everyday life</span><span class="topic-more">Learn more</span></button>
+<button type="button" class="topic-c" data-reveal data-dialog="dlg-schlaf" aria-haspopup="dialog"><img src="../../img/ill-schlaf.png" alt="Sleep hygiene" loading="lazy" decoding="async" class="topic-ill"><span class="topic-t">Sleep hygiene</span><span class="topic-more">Learn more</span></button>
+</div>
+<dialog class="topic-dlg" id="dlg-stress" aria-labelledby="dlg-stress-t"><button type="button" class="dlg-close" aria-label="Close">&times;</button><h3 id="dlg-stress-t">Stress management</h3><p>You learn to recognise stress early and counteract it in a targeted way, for example with short relaxation and breathing exercises. You also practise putting pressure at work into perspective and planning breaks deliberately. Step by step, you build routines that ease your everyday life.</p></dialog>
+<dialog class="topic-dlg" id="dlg-aktivierung" aria-labelledby="dlg-aktivierung-t"><button type="button" class="dlg-close" aria-label="Close">&times;</button><h3 id="dlg-aktivierung-t">Behavioural activation</h3><p>Under stress, many people withdraw and do less and less. As a result, they miss exactly the experiences that bring joy and energy. With actiself, you deliberately plan pleasant and meaningful activities, including with other people, such as meeting friends. At the same time, you learn to cut back on things that are not good for you, for example too much screen time.</p></dialog>
+<dialog class="topic-dlg" id="dlg-bewegung" aria-labelledby="dlg-bewegung-t"><button type="button" class="dlg-close" aria-label="Close">&times;</button><h3 id="dlg-bewegung-t">More movement in everyday life</h3><p>Studies show that people who are physically active on a regular basis are less likely to develop depression, and that physical activity can reduce exhaustion, the core symptom of burnout. You don’t need to be an athlete: walks, cycling or taking the stairs all count. actiself helps you build lasting exercise routines into your everyday life. Your smartwatch or fitness tracker shows what you have already achieved.</p></dialog>
+<dialog class="topic-dlg" id="dlg-schlaf" aria-labelledby="dlg-schlaf-t"><button type="button" class="dlg-close" aria-label="Close">&times;</button><h3 id="dlg-schlaf-t">Sleep hygiene</h3><p>Good sleep is the foundation of recovery. You find out which habits support your sleep, from regular times to an evening routine, and try out small changes straight away.</p></dialog>
+
 <figure data-reveal>
   <svg class="program" viewBox="0 0 520 330" aria-label="Grid of 6 weeks with 7 exercises each" role="img">
     <text x="0" y="14">WEEK</text>

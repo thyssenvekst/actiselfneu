@@ -388,3 +388,7 @@ button.topic-c:focus-visible { outline: 3px solid var(--blue); outline-offset: 3
 @media (min-width: 1241px) { .nav-link { padding: 8px 10px; font-size: .92rem; } .nav-item:last-child .nav-link { padding: 10px 16px; } }
 button.btn { font-family: inherit; font-size: 1rem; cursor: pointer; border: 0; }
 button.btn.btn-ghost { border: 1.5px solid var(--line); }
+.prose .topics-intro { margin-top: 32px; }
+.prose .topics4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-bottom: 40px; }
+.prose .topic-dlg h3 { margin-top: 0; }
+@media (max-width: 560px) { .prose .topics4 { grid-template-columns: 1fr; } }
